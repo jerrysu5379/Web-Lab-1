@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>多媒体及滚动字幕网页设计效果</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #00FF00; /* Lime Green background as seen in the image */
+            color: white;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+        }
+        .audio-player, .video-player {
+            margin: 20px 0;
+        }
+        .lyrics {
+            background-color: #0000FF; /* Blue background for the lyrics box */
+            color: #FFFFFF; /* White text */
+            padding: 10px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+            height: 150px; /* Set a fixed height */
+        }
+        .lyrics p {
+            margin: 0;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            /* Starting position offscreen */
+            transform: translateY(100%);
+            /* Different animation-delay for each line */
+            animation: scroll 10s linear infinite;
+        }
+        /* Different delays for the animation to start for each line of lyrics */
+        .lyrics p:nth-child(1) { animation-delay: 0s; }
+        .lyrics p:nth-child(2) { animation-delay: 2.5s; }
+        .lyrics p:nth-child(3) { animation-delay: 5s; }
+        .lyrics p:nth-child(4) { animation-delay: 7.5s; }
+        /* Add more delays as needed for additional lines */
+
+        /* Keyframes for scrolling effect */
+        @keyframes scroll {
+            0%, 100% { transform: translateY(100%); }
+            25%, 75% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="audio-player">
+        <audio controls>
+            <source src="Resource/embed/蔡琴明月几时有.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <div class="video-player">
+        <video controls width="320" height="240">
+            <source src="Resource/embed/htmlexample.mpeg" type="video/mpeg">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="lyrics">
+        <p>明月几时有？把酒问青天。</p>
+        <p>不知天上宫阙，今夕是何年。</p>
+        <p>我欲乘风归去...</p>
+        <!-- Add more lyrics here with additional <p> tags -->
+    </div>
+</div>
+</body>
+</html>

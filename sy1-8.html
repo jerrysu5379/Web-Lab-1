@@ -1,20 +1,57 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>无标题文档</title>
-<style type="text/css">
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国字型布局</title>
+    <style>
+        .header, .footer {
+            background-color: yellow; /* 头部和尾部黄色背景 */
+            height: 100px; /* 高度100px */
+            width: 800px; /* 宽度800px */
+            text-align: center; /* 文本居中 */
+            line-height: 100px; /* 行高100px以垂直居中文本 */
+        }
+        .middle {
+            background-color: green; /* 中间部分绿色背景 */
+            height: 50px; /* 高度50px */
+            width: 800px; /* 宽度800px */
+            text-align: center; /* 文本居中 */
+            line-height: 50px; /* 行高50px以垂直居中文本 */
+        }
+        .left-sidebar {
+            background-color: brown; /* 左侧边栏棕色背景 */
+            height: 400px; /* 高度400px */
+            width: 200px; /* 宽度200px */
+            float: left; /* 左浮动 */
+            text-align: center; /* 文本居中 */
+            line-height: 400px; /* 行高400px以垂直居中文本 */
+        }
+        .main-content {
+            background-color: pink; /* 主内容区粉色背景 */
+            height: 400px; /* 高度400px */
+            width: 600px; /* 宽度600px */
+            float: left; /* 左浮动 */
+            text-align: center; /* 文本居中 */
+        }
+        .footer {
+            clear: both; /* 清除浮动 */
+        }
+        .main-content p {
+            margin: 0; /* 移除段落默认外边距 */
+            position: relative; /* 相对定位 */
+            top: 50%; /* 向下移动50%的高度 */
+            transform: translateY(-50%); /* 向上偏移自身高度的50%以实现垂直居中 */
+        }
+    </style>
 </head>
 <body>
-<img src="images/index_02.jpg" width="135" height="48" />
-<p>&nbsp;家园简介&nbsp; |&nbsp;新闻动&nbsp; |&nbsp; 宠物种类&nbsp; |&nbsp; 健康课堂&nbsp; |&nbsp; 宠物论坛&nbsp; |&nbsp; 联系我们</p>
+<div class="header">页眉高度100px; 宽度 800px;</div>
+<div class="middle">链接条height: 50px; width: 800px;</div>
+<div class="left-sidebar">侧边栏height: 400px; width: 200px;</div>
+<div class="main-content">
+    <p>主内容区height: 400px; width: 600px; 主内容区1 主内容区2</p>
+</div>
+<div class="footer">页脚height: 50px; width: 800px;</div>
 </body>
 </html>
