@@ -1,75 +1,46 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>多媒体及滚动字幕网页设计效果</title>
+    <title>设计支持音频、视频播放的网页</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #00FF00; /* Lime Green background as seen in the image */
-            color: white;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            text-align: center;
-        }
-        .audio-player, .video-player {
-            margin: 20px 0;
-        }
-        .lyrics {
-            background-color: #0000FF; /* Blue background for the lyrics box */
-            color: #FFFFFF; /* White text */
-            padding: 10px;
-            margin: 20px 0;
-            position: relative;
-            overflow: hidden;
-            height: 150px; /* Set a fixed height */
-        }
-        .lyrics p {
-            margin: 0;
-            position: absolute;
-            width: 100%;
-            text-align: center;
-            /* Starting position offscreen */
-            transform: translateY(100%);
-            /* Different animation-delay for each line */
-            animation: scroll 10s linear infinite;
-        }
-        /* Different delays for the animation to start for each line of lyrics */
-        .lyrics p:nth-child(1) { animation-delay: 0s; }
-        .lyrics p:nth-child(2) { animation-delay: 2.5s; }
-        .lyrics p:nth-child(3) { animation-delay: 5s; }
-        .lyrics p:nth-child(4) { animation-delay: 7.5s; }
-        /* Add more delays as needed for additional lines */
+      p.b{color: blue;font-family:  "STXinwei"}
+      h1{color: blue;text-align: center;font-family:  "STXinwei"}
 
-        /* Keyframes for scrolling effect */
-        @keyframes scroll {
-            0%, 100% { transform: translateY(100%); }
-            25%, 75% { transform: translateY(0); }
-        }
     </style>
 </head>
 <body>
-<div class="container">
-    <div class="audio-player">
-        <audio controls>
-            <source src="Resource/embed/蔡琴明月几时有.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
-    <div class="video-player">
-        <video controls width="320" height="240">
-            <source src="Resource/embed/htmlexample.mpeg" type="video/mpeg">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-    <div class="lyrics">
-        <p>明月几时有？把酒问青天。</p>
-        <p>不知天上宫阙，今夕是何年。</p>
-        <p>我欲乘风归去...</p>
-        <!-- Add more lyrics here with additional <p> tags -->
-    </div>
-</div>
+      <h1>明月几时有</h1>
+      <hr align="center" color="blue" width="100%"/>
+      <p class="b" align="center">明月几时有？把酒问青天。</p>
+      <p class="b" align="center"> 不知天上宫阙，今夕是何年。</p>
+      <p class="b" align="center"> 我欲乘风归去，又恐琼楼玉宇，高处不胜寒，起舞弄清影，何似在人间。</p>
+      <p class="b" align="center">  转朱阁，抵绮户，照无眠。</p>
+      <p class="b" align="center"> 不应有恨，何事偏向别时圆。</p>
+      <p class="b" align="center"> 人有悲欢离合，月有阴晴圆缺，此事古难全。</p>
+      <p class="b" align="center"> 但愿人长久，千里共婵娟。明月几时有？把酒问青天。</p>
+      <p class="b" align="center">  不知天上宫阙，今夕是何年。</p>
+      <p class="b" align="center"> 我欲乘风归去，又恐琼楼玉宇，高处不胜寒，起舞弄清影，何似在人间。</p>
+      <p class="b" align="center"> 转朱阁，抵绮户，照无眠。</p>
+      <p class="b" align="center"> 不应有恨，何事偏向别时圆。</p>
+      <p class="b" align="center"> 人有悲欢离合，月有阴晴圆缺，此事古难全。</p>
+      <p class="b" align="center">但愿人长久，千里共婵娟。</p>
+      <!-- 使用video嵌入本地视频 -->
+      <hr align="center" color="red" width="100%"/>
+
+      <video><source src="Resource/embed/htmlexample.mpeg" type="mpeg">
+      </video>
+
+      <audio controls> <source src="Resource/embed/蔡琴明月几时有.mp3" type="audio/mpeg">
+      </audio>
+      <video controls> <source  src="Resource/embed/62.swf" >
+      </video>
+      <video controls> <source  src="Resource/embed/62.swf"  >
+      </video>
+
+      <marquee direction=left behavior="alternate" style="background: #003cff">欢迎来到我的多媒体世界</marquee>
+
+
+
 </body>
 </html>
