@@ -2,72 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>节日庆祝页面</title>
+    <title>Page Layout</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: url('images/huanduchunji.jpg') no-repeat; /* 替换为实际的图片路径 */
-            background-size: cover; /* 背景图片覆盖整个页面 */
         }
         .header {
-            background-color: #1E90FF; /* 根据实际颜色调整 */
+            background-color: #1E90FF;
+            padding: 10px;
             color: white;
-            padding: 20px 0;
-            text-align: center;
             position: relative;
         }
         .header img {
-            position: absolute; /* Logo定位到左上角 */
+            position: absolute;
             top: 10px;
             left: 10px;
         }
         .header h1 {
-            margin: 0; /* 去掉默认的外边距 */
+            text-align: center;
+            position: relative;
+            margin: 0;
+            padding-top: 60px;
         }
         .nav {
-            background-color: #FFD700; /* 根据实际颜色调整 */
-            padding: 5px 0;
+            background-color: #FFD700;
+            padding: 5px;
             text-align: center;
-            margin-top: 20px; /* 与上方内容留出间距 */
         }
         .nav a {
-            margin: 0 15px;
+            margin: 0 10px;
             text-decoration: none;
             color: black;
         }
         .sidebar {
-            background-color: #FFD700; /* 根据实际颜色调整 */
+            background-color: #FFD700;
+            width: 200px;
             float: left;
-            width: 200px; /* 调整为所需宽度 */
-            height: 100vh; /* 视口高度 */
             padding: 15px;
-            box-sizing: border-box; /* Padding包含在宽度内 */
+            height: calc(100vh - 130px);
+            text-align: center;
         }
         .sidebar p {
-            color: white;
+            margin: 0;
+            padding: 10px 0;
+        }
+        .content {
+            background: url('images/huanduchunji.jpg') no-repeat center center;
             text-align: center;
+            margin-left: 200px;
+            height: 500px;
+            position: relative;
         }
         .content h2 {
-            color: #FF4500; /* 根据实际颜色调整 */
-            margin: 0; /* 去掉默认的外边距 */
-            padding: 20px 0; /* 为标题添加一些内边距 */
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            margin-top: 0;
         }
         .footer {
-            background-color: #1E90FF; /* 根据实际颜色调整 */
-            color: white;
+            background-color: #1E90FF;
+            padding: 10px;
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            color: white;
+            clear: both;
         }
     </style>
 </head>
 <body>
 <div class="header">
-    <img src="images/Header.jpg" alt="Logo"> <!-- 替换为实际的图片路径 -->
-    <h1>Header</h1>
+    <img src="images/Header.jpg" alt="Logo">
+    <h1>欢度新春佳节</h1>
 </div>
 <div class="nav">
     <a href="#">首页</a> |
@@ -84,9 +91,8 @@
     <p>关于</p>
 </div>
 <div class="content">
-    <h2>欢度新春佳节</h2>
 </div>
-<div class="footer">ßßßß
+<div class="footer">
     <p>Footer</p>
 </div>
 </body>
