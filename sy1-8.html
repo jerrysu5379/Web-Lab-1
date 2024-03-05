@@ -1,35 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>上中下布局格式</title>
-    <style>
-        #div1 {
-            background-color: yellow; /* 黄色背景 */
-            height: 200px; /* 高度200px */
-            width: 800px; /* 宽度800px */
+    <meta charset="utf-8">
+    <title>无标题文档</title>
+    <style type="text/css">
+        body {
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
         }
-        #div2 {
-            background-color: green; /* 绿色背景 */
-            height: 400px; /* 高度400px */
-            width: 800px; /* 宽度800px */
+        /*设置a对象在未被访问前的样式表属性*/
+        a:link {
+            color: #000;
+            text-decoration: none;
         }
-        #div3 {
-            background-color: brown; /* 棕色背景 */
-            height: 100px; /* 高度100px */
-            width: 800px; /* 宽度800px */
+        /*设置a对象在鼠标悬停时的样式表属性,a:hover必须在a:visited之前，否则在浏览器中没有效果*/
+        a:hover {
+            color: #00F;
+            text-decoration: none;
         }
-        #div4 {
-            margin: 0 auto; /* 左右居中 */
+        /*设置a对象在被用户激活（按下鼠标未松手）时的样式表属性*/
+        a:active {
+            color:#0F0;
+            text-decoration: none;
+        }
+        /*设置a对象在链接地址已被访问过时的样式表属性*/
+        a:visited {
+            color:#F00;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-<div id="div4">
-<div id="div1">id "div1" 宽度800px 高度 200px</div>
-<div id="div2">id "div2" 宽度800px 高度 400px</div>
-<div id="div3">id "div1" 宽度800px 高度 100px</div>
-</div>
+<img src="images/index_02.jpg" width="135" height="48" />
+<p>
+    <a href="#">家园简介</a>&nbsp; |
+    <a href="#">新闻动态</a>&nbsp; |
+    <a href="#">宠物种类</a>&nbsp; |
+    <a href="#">健康课堂</a>&nbsp; |
+    <a href="#">宠物风采</a>&nbsp; |
+    <a href="#">宠物论坛</a>&nbsp; |
+    <a href="#">联系我们</a>
+</p>
 </body>
 </html>
